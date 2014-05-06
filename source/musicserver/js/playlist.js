@@ -56,7 +56,7 @@ jQuery(document).ready(function () {
         });
     });
 
-    $.ajax('musicstreamer/playlists/playlist.txt', {
+    $.ajax('musicserver/playlists/playlist.txt', {
         dataType: 'text',
         success: function (data) {
             $('#playlist').html(data.replace(/[\\]/g, "/").replace(/[\#]/g, "%23"));
@@ -159,7 +159,7 @@ jQuery(document).ready(function () {
             var location = $(this).find('.location').text();
             var albumart = $(this).find('.albumart').text();
 
-            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '"><img src="' + albumart + '/front.jpg"' + 'onerror=' + '"this.src=' + "'musicstreamer/images/unknown_album.png'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
+            $('.mejs-list').append('<li url="' + location + '" artist="' + artist + '"><img src="' + albumart + '/front.jpg"' + 'onerror=' + '"this.src=' + "'musicserver/images/unknown_album.png'" + '" alt="' + album + '"><div class="title ellipsis"><span>' + decodeURIComponent(title) + '</span></div><div class="aa ellipsis"><span>' + artist + ' - ' + decodeURIComponent(album) + '</span></div></li>');
 
         });
 
@@ -257,7 +257,7 @@ jQuery(document).ready(function () {
         $('#side-tracks').mCustomScrollbar("scrollTo", ".current");
     }
 
-    // How to use MusicStreamer popup
+    // How to use Music Server popup
     function dialogue(content, title) {
         $('<div />').qtip({
             content: {
@@ -302,7 +302,7 @@ jQuery(document).ready(function () {
                     'class': 'full'
             });
 
-        dialogue(message.add(ok), 'How to use MusicStreamer:');
+        dialogue(message.add(ok), 'How to use Music Server:');
     };
 
     // Error popup

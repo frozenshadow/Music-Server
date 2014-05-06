@@ -1,4 +1,4 @@
-Music-Server
+Music Server
 ============
 
 We are working on it ;)

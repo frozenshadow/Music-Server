@@ -1,9 +1,0 @@
-<div id="tracklist">
-    <div class="track">
-        <div class="title">Demo</div>
-        <div class="creator">Music Server Team</div>
-        <div class="album">Demo album</div>
-        <div class="location">test\test\test.wav</div>
-        <div class="albumart">test\test</div>
-    </div>
-</div>
